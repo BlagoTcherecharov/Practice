@@ -16,7 +16,7 @@ namespace Bank_account.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=MSI\\SQLEXPRESS;Database=accounts;Trusted_Connection=True;TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer(${{ secrets.DB_Connection }});
         }
 
         public DbSet<Account> Accounts { get; set; }
