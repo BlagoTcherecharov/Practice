@@ -16,7 +16,7 @@ namespace Bank_account.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(${{ secrets.DB_Connection }});
+            optionsBuilder.UseSqlServer("DB_CONNECTION");
         }
 
         public DbSet<Account> Accounts { get; set; }
